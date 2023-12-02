@@ -1,0 +1,54 @@
+@token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQzOTY4MGYwYTAwZTYxODJhNDM1YmRmIiwiZW1haWwiOiJPdGhtYW5lM0B0ZXN0LmNvbSIsInBlcm1pc3Npb25zIjpbXSwiaWF0IjoxNjgxNDgzODA4LCJleHAiOjE2ODE0OTEwMDh9.dSm_rfhL7q753gEARCK_fbnEyFtR5O3qFIYF-RlX00o' 
+GET http://localhost:3030
+
+Content-Type: application/json
+
+authorization:  JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQzOTY4MGYwYTAwZTYxODJhNDM1YmRmIiwiZW1haWwiOiJPdGhtYW5lM0B0ZXN0LmNvbSIsInBlcm1pc3Npb25zIjpbXSwiaWF0IjoxNjgxNDgzODA4LCJleHAiOjE2ODE0OTEwMDh9.dSm_rfhL7q753gEARCK_fbnEyFtR5O3qFIYF-RlX00o
+###
+Authorization: JWT {{token}}
+
+POST  http://localhost:3030/Add HTTP/1.1
+content-type: application/json
+
+{
+    "name": "resp1",
+    "age": "30"
+}
+
+###
+POST  http://localhost:3030/Add HTTP/1.1
+content-type: application/json
+
+{
+    "name": "std1",
+    "age": "30",
+    "adress": {
+        "CP":"20001",
+        "street":"nahda",
+        "city":"khbga"
+    },
+    "courses":["info","agile"],
+    "classRes":"64032045ab39979c096354f8"
+     
+}
+
+###
+
+GET http://localhost:3030/640b559088f57befed6a0235
+###
+PATCH   http://localhost:3030/64006f4fd6921483616ac234 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "efssg",
+    "age": "40"
+}
+
+###
+
+
+DELETE  http://localhost:3030/63f60f6a182cf1e05668f15c HTTP/1.1
+
+
+
+
