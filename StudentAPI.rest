@@ -15,6 +15,17 @@ content-type: application/json
     "age": "30"
 }
 
+
+###
+Authorization: JWT {{token}}
+
+POST  http://localhost:3030/Add HTTP/1.1
+content-type: application/json
+
+{
+    "name": "resp2",
+    "age": "25"
+}
 ###
 POST  http://localhost:3030/Add HTTP/1.1
 content-type: application/json
